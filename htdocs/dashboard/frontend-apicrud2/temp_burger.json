@@ -1,0 +1,7 @@
+{
+  "nombre": "Super Delicious Burger",
+  "descripcion": "Descubre el sabor auténtico de nuestras hamburguesas artesanales hechas con ingredientes frescos y de la mejor calidad",
+  "precio": "100.50",
+  "stock": 10,
+  "imagen": "frontend-apicrud2/images/super-delicious-burger.jpg"
+}

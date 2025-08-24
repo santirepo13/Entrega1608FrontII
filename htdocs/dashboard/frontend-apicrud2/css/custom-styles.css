@@ -1,0 +1,105 @@
+/* Estilos personalizados para el sistema de inventario */
+
+/* Mejoras para las tablas */
+.table th {
+  border-top: none;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.table td {
+  vertical-align: middle;
+  font-size: 0.875rem;
+}
+
+/* Estilos para badges */
+.badge {
+  font-size: 0.75rem;
+  padding: 0.375rem 0.75rem;
+}
+
+/* Botones de acción en tablas */
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  margin: 0 0.125rem;
+}
+
+/* Estilos para formularios */
+.form-label {
+  font-weight: 600;
+  color: #5a5c69;
+  margin-bottom: 0.5rem;
+}
+
+.form-control:focus {
+  border-color: #4e73df;
+  box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+}
+
+/* Estilos para cards */
+.card {
+  border: none;
+  border-radius: 0.35rem;
+}
+
+.card-header {
+  background-color: #f8f9fc;
+  border-bottom: 1px solid #e3e6f0;
+}
+
+/* Estilos para el buscador */
+.hide-focus:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Estilos para estados */
+.badge-success {
+  background-color: #1cc88a;
+}
+
+.badge-danger {
+  background-color: #e74a3b;
+}
+
+.badge-warning {
+  background-color: #f6c23e;
+}
+
+.badge-info {
+  background-color: #36b9cc;
+}
+
+.badge-primary {
+  background-color: #4e73df;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .table-responsive {
+    border: none;
+  }
+
+  .btn-sm {
+    padding: 0.125rem 0.25rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Animaciones suaves */
+.btn,
+.form-control,
+.card {
+  transition: all 0.15s ease-in-out;
+}
+
+/* Hover effects */
+.table tbody tr:hover {
+  background-color: #f8f9fc;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}

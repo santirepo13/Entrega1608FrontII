@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestros Servicios - Burger Restaurant</title>
+  <link rel="shortcut icon" type="image" href="./images/logo.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg" id="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html" id="logo"><img src="./images/logo.png" alt="" width="30px">BUR<span>GER</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span><i class="fa-solid fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#products">Menú</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categorías
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #ffc800;">
+              <li><a class="dropdown-item" href="index.html#hamburguesas">Hamburguesas</a></li>
+              <li><a class="dropdown-item" href="index.html#pizza">Pizza</a></li>
+              <li><a class="dropdown-item" href="index.html#pollo-frito">Pollo Frito</a></li>
+              <li><a class="dropdown-item" href="index.html#acompañamientos">Acompañamientos y Papas</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">Acerca de</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="services.html">Servicios</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <div class="icons">
+            <i class="fa-regular fa-user"></i>
+            <div class="carrito">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="contar-pro">0</span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Services Hero Section -->
+  <section class="services-hero py-5" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+    <div class="container text-center text-white">
+      <h1 class="display-4 mb-4">Nuestros Servicios</h1>
+      <p class="lead">Experimenta lo mejor en servicio de comida y hospitalidad</p>
+    </div>
+  </section>
+
+  <!-- Main Services -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Dine-In -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100 shadow-sm border-0 service-card">
+            <div class="card-body text-center p-5">
+              <i class="fas fa-utensils fa-4x text-warning mb-4"></i>
+              <h3 class="mb-3">Experiencia en el Restaurante</h3>
+              <p class="mb-4">Disfruta de nuestro ambiente acogedor con asientos cómodos, personal amigable y comidas recién preparadas servidas calientes en tu mesa.</p>
+              <ul class="list-unstyled text-start">
+                <li><i class="fas fa-check text-success"></i> Asientos cómodos</li>
+                <li><i class="fas fa-check text-success"></i> Ambiente climatizado</li>
+                <li><i class="fas fa-check text-success"></i> Wi-Fi gratuito</li>
+                <li><i class="fas fa-check text-success"></i> Ambiente familiar</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Takeaway -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100 shadow-sm border-0 service-card">
+            <div class="card-body text-center p-5">
+              <i class="fas fa-shopping-bag fa-4x text-warning mb-4"></i>
+              <h3 class="mb-3">Para Llevar Rápido</h3>
+              <p class="mb-4">Ordena con anticipación o ven por recolección rápida. Todas las órdenes se preparan frescas y se empaquetan de forma segura para tu comodidad.</p>
+              <ul class="list-unstyled text-start">
+                <li><i class="fas fa-check text-success"></i> Preparación rápida</li>
+                <li><i class="fas fa-check text-success"></i> Pedidos en línea</li>
+                <li><i class="fas fa-check text-success"></i> Empaque seguro</li>
+                <li><i class="fas fa-check text-success"></i> Notificaciones de tiempo listo</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Delivery -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100 shadow-sm border-0 service-card">
+            <div class="card-body text-center p-5">
+              <i class="fas fa-truck fa-4x text-warning mb-4"></i>
+              <h3 class="mb-3">Entrega a Domicilio</h3>
+              <p class="mb-4">Recibe tus comidas favoritas directamente en tu puerta. Caliente, fresco y a tiempo - siempre.</p>
+              <ul class="list-unstyled text-start">
+                <li><i class="fas fa-check text-success"></i> Entrega gratuita sobre $25</li>
+                <li><i class="fas fa-check text-success"></i> Seguimiento en tiempo real</li>
+                <li><i class="fas fa-check text-success"></i> Entrega sin contacto</li>
+                <li><i class="fas fa-check text-success"></i> Entrega de 30-45 minutos</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Services -->
+  <section class="py-5" style="background-color: #f8f9fa;">
+    <div class="container">
+      <h2 class="text-center mb-5">Servicios Adicionales</h2>
+      <div class="row">
+        <!-- Catering -->
+        <div class="col-lg-6 mb-4">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="row g-0 align-items-center">
+              <div class="col-md-4 text-center p-4">
+                <i class="fas fa-users fa-3x text-warning"></i>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h4>Servicios de Catering</h4>
+                  <p class="mb-3">¿İPlaneas un evento? ¡Déjanos manejar la comida! Ofrecemos paquetes de catering para fiestas, eventos corporativos y ocasiones especiales.</p>
+                  <ul class="list-unstyled">
+                    <li><i class="fas fa-star text-warning"></i> Planificación de menú personalizada</li>
+                    <li><i class="fas fa-star text-warning"></i> Configuración de servicio completo</li>
+                    <li><i class="fas fa-star text-warning"></i> Personal profesional</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Private Events -->
+        <div class="col-lg-6 mb-4">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="row g-0 align-items-center">
+              <div class="col-md-4 text-center p-4">
+                <i class="fas fa-calendar-alt fa-3x text-warning"></i>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h4>Eventos Privados</h4>
+                  <p class="mb-3">Reserva nuestro espacio para tus celebraciones especiales. Perfecto para cumpleaños, aniversarios y reuniones familiares.</p>
+                  <ul class="list-unstyled">
+                    <li><i class="fas fa-star text-warning"></i> Área de comedor privada</li>
+                    <li><i class="fas fa-star text-warning"></i> Montaje de decoración</li>
+                    <li><i class="fas fa-star text-warning"></i> Pasteles de celebración personalizados</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Corporate Orders -->
+        <div class="col-lg-6 mb-4">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="row g-0 align-items-center">
+              <div class="col-md-4 text-center p-4">
+                <i class="fas fa-building fa-3x text-warning"></i>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h4>Órdenes Corporativas</h4>
+                  <p class="mb-3">Alimenta a tu equipo con nuestras deliciosas comidas. Paquetes corporativos especiales y órdenes al por mayor disponibles con descuentos.</p>
+                  <ul class="list-unstyled">
+                    <li><i class="fas fa-star text-warning"></i> Descuentos por volumen</li>
+                    <li><i class="fas fa-star text-warning"></i> Entregas programadas</li>
+                    <li><i class="fas fa-star text-warning"></i> Términos de pago flexibles</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gift Cards -->
+        <div class="col-lg-6 mb-4">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="row g-0 align-items-center">
+              <div class="col-md-4 text-center p-4">
+                <i class="fas fa-gift fa-3x text-warning"></i>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h4>Tarjetas de Regalo</h4>
+                  <p class="mb-3">¡Regala el obsequio de buena comida! Nuestras tarjetas de regalo son perfectas para cualquier ocasión y nunca expiran.</p>
+                  <ul class="list-unstyled">
+                    <li><i class="fas fa-star text-warning"></i> Tarjetas digitales y físicas</li>
+                    <li><i class="fas fa-star text-warning"></i> Montos personalizados</li>
+                    <li><i class="fas fa-star text-warning"></i> Sin fecha de expiración</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Hours -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card border-0 shadow-lg">
+            <div class="card-body p-5 text-center">
+              <h3 class="mb-4"><i class="fas fa-clock text-warning"></i> Horarios de Servicio</h3>
+              <div class="row">
+                <div class="col-md-6">
+                  <h5 class="mb-3">Comer en el Lugar y Para Llevar</h5>
+                  <p><strong>Lunes - Jueves:</strong> 11:00 AM - 10:00 PM</p>
+                  <p><strong>Viernes - Sábado:</strong> 11:00 AM - 11:00 PM</p>
+                  <p><strong>Domingo:</strong> 12:00 PM - 9:00 PM</p>
+                </div>
+                <div class="col-md-6">
+                  <h5 class="mb-3">Servicio de Entrega</h5>
+                  <p><strong>Lunes - Jueves:</strong> 12:00 PM - 10:00 PM</p>
+                  <p><strong>Viernes - Sábado:</strong> 12:00 PM - 11:00 PM</p>
+                  <p><strong>Domingo:</strong> 1:00 PM - 9:00 PM</p>
+                </div>
+              </div>
+              <hr class="my-4">
+              <p class="text-muted mb-0">
+                <i class="fas fa-info-circle"></i> 
+                Catering y eventos privados disponibles con cita previa. 
+                Contáctanos 24 horas antes para arreglos especiales.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-5" style="background: linear-gradient(135deg, #ffc800, #ffcd32);">
+    <div class="container text-center">
+      <h2 class="text-white mb-4">¿İListo para Ordenar?</h2>
+      <p class="lead text-white mb-4">Elige tu forma preferida de disfrutar nuestra deliciosa comida</p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="index.html" class="btn btn-light btn-lg px-4">
+          <i class="fas fa-home"></i> Ordenar en Línea
+        </a>
+        <a href="tel:+1234567890" class="btn btn-outline-light btn-lg px-4">
+          <i class="fas fa-phone"></i> Llámanos
+        </a>
+        <a href="contact.html" class="btn btn-outline-light btn-lg px-4">
+          <i class="fas fa-calendar"></i> Reservar Evento
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer" style="margin-top: 50px;">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <a class="navbar-brand" href="index.html" id="logo2"><img src="./images/logo.png" alt="" width="30px">Burger</a>
+            <p>Tu destino favorito de hamburguesas con comida de calidad y servicio excepcional.</p><br>
+            <p>
+              Calle del Restaurante 123 <br><br>
+              Distrito de Comida <br><br>
+              Ciudad, Estado 12345 <br><br>
+            </p>
+            <strong><i class="fa-solid fa-phone"></i> Teléfono: <strong>+1-234-567-8900</strong></strong><br>
+            <strong><i class="fa-solid fa-envelope"></i> Email: <strong>info@burgerrestaurant.com</strong></strong>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Enlaces Útiles</h4>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="about.html">Acerca de</a></li>
+              <li><a href="contact.html">Contacto</a></li>
+              <li><a href="services.html">Servicios</a></li>
+              <li><a href="privacy.html">Política de Privacidad</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Nuestros Servicios</h4>
+            <p>Ofrecemos una variedad de opciones deliciosas para todos los gustos.</p>
+            <ul>
+              <li><a href="index.html#menu">Hamburguesas</a></li>
+              <li><a href="index.html#menu">Pizza</a></li>
+              <li><a href="index.html#menu">Pollo Frito</a></li>
+              <li><a href="index.html#menu">Acompañantes y Papas</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Síguenos</h4>
+            <p>Manténte conectado con nosotros en redes sociales para actualizaciones y ofertas especiales.</p>
+            <div class="socail-links mt-3">
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong>Burger Restaurant</strong>. Todos los Derechos Reservados
+      </div>
+      <div class="credits">
+        Proyecto Educativo - Sistema de Gestión de Restaurante
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="arrow"><i class="fa-solid fa-arrow-up"></i></a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="js/cart.js"></script>
+  
+  <style>
+    .service-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+    }
+  </style>
+</body>
+</html>

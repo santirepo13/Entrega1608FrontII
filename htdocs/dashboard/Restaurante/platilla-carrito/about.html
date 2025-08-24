@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acerca de Nosotros - Restaurante Burger</title>
+  <link rel="shortcut icon" type="image" href="./images/logo.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg" id="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html" id="logo"><img src="./images/logo.png" alt="" width="30px">BUR<span>GER</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span><i class="fa-solid fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#products">Menú</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categorías
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #ffc800;">
+              <li><a class="dropdown-item" href="index.html#hamburguesas">Hamburguesas</a></li>
+              <li><a class="dropdown-item" href="index.html#pizza">Pizza</a></li>
+              <li><a class="dropdown-item" href="index.html#pollo-frito">Pollo Frito</a></li>
+              <li><a class="dropdown-item" href="index.html#acompañamientos">Acompañamientos y Papas</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="about.html">Acerca de Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contáctanos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Servicios</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <div class="icons">
+            <i class="fa-regular fa-user"></i>
+            <div class="carrito">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="contar-pro">0</span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Hero Section -->
+  <section class="about-hero py-5" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./images/about.png'); background-size: cover; background-position: center;">
+    <div class="container text-center text-white">
+      <h1 class="display-4 mb-4">Acerca de Nuestro Restaurante</h1>
+      <p class="lead">Sirviendo deliciosas hamburguesas y comida de calidad desde 2020</p>
+    </div>
+  </section>
+
+  <!-- About Content -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="about-content">
+            <h2 class="mb-4">Nuestra Historia</h2>
+            <p class="mb-4">
+              ¡Bienvenidos al Restaurante Burger, donde la pasión se encuentra con el sabor! Fundados en 2020, comenzamos con una misión simple: 
+              crear las hamburguesas más deliciosas y satisfactorias usando solo los ingredientes más frescos y recetas probadas por el tiempo.
+            </p>
+            <p class="mb-4">
+              Lo que comenzó como un pequeño negocio familiar ha crecido hasta convertirse en un destino local querido por los entusiastas de la comida que 
+              aprecian la calidad, el sabor y el servicio excepcional. Cada hamburguesa que servimos está elaborada con cuidado, usando ingredientes 
+              de origen local y preparada fresca por pedido.
+            </p>
+            <p class="mb-4">
+              Nuestro compromiso con la excelencia se extiende más allá de simplemente buena comida. Creemos en crear una atmósfera cálida y acogedora 
+              donde amigos y familias puedan reunirse para disfrutar comidas memorables juntos.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="./images/about.png" alt="Acerca de Nosotros" class="img-fluid rounded shadow">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Values -->
+  <section class="py-5" style="background-color: #f8f9fa;">
+    <div class="container">
+      <h2 class="text-center mb-5">Nuestros Valores</h2>
+      <div class="row">
+        <div class="col-md-4 text-center mb-4">
+          <div class="p-4">
+            <i class="fas fa-heart fa-3x text-warning mb-3"></i>
+            <h4>Calidad Primero</h4>
+            <p>Utilizamos solo los mejores ingredientes, desde hamburguesas de carne premium hasta vegetales frescos y panes artesanales.</p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center mb-4">
+          <div class="p-4">
+            <i class="fas fa-users fa-3x text-warning mb-3"></i>
+            <h4>Enfocados en la Comunidad</h4>
+            <p>Estamos orgullosos de ser parte de esta comunidad y apoyar a proveedores y agricultores locales siempre que sea posible.</p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center mb-4">
+          <div class="p-4">
+            <i class="fas fa-clock fa-3x text-warning mb-3"></i>
+            <h4>Rápido y Fresco</h4>
+            <p>Cada pedido se prepara fresco para asegurar que obtengas el mejor sabor y calidad, servido rápidamente y caliente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Team -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Conoce a Nuestro Equipo</h2>
+      <div class="row">
+        <div class="col-md-4 text-center mb-4">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body p-4">
+              <i class="fas fa-user-circle fa-4x text-warning mb-3"></i>
+              <h5>Chef Rodríguez</h5>
+              <p class="text-muted">Chef Principal</p>
+              <p>Con 15 años de experiencia culinaria, el Chef Rodríguez aporta creatividad y pasión a cada plato.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 text-center mb-4">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body p-4">
+              <i class="fas fa-user-circle fa-4x text-warning mb-3"></i>
+              <h5>María Santos</h5>
+              <p class="text-muted">Gerente del Restaurante</p>
+              <p>María asegura que cada cliente tenga una experiencia excepcional con su atención al detalle y hospitalidad cálida.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 text-center mb-4">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body p-4">
+              <i class="fas fa-user-circle fa-4x text-warning mb-3"></i>
+              <h5>Carlos Méndez</h5>
+              <p class="text-muted">Gerente de Operaciones</p>
+              <p>Carlos supervisa las operaciones diarias para asegurar calidad consistente y servicio eficiente para todos nuestros clientes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer" style="margin-top: 50px;">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <a class="navbar-brand" href="index.html" id="logo2"><img src="./images/logo.png" alt="" width="30px">Burger</a>
+            <p>Tu destino favorito de hamburguesas con comida de calidad y servicio excepcional.</p><br>
+            <p>
+              Calle del Restaurante 123 <br><br>
+              Distrito Gastronómico <br><br>
+              Ciudad, Estado 12345 <br><br>
+            </p>
+            <strong><i class="fa-solid fa-phone"></i> Teléfono: <strong>+1-234-567-8900</strong></strong><br>
+            <strong><i class="fa-solid fa-envelope"></i> Email: <strong>info@restauranteburger.com</strong></strong>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Enlaces Útiles</h4>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="about.html">Acerca de</a></li>
+              <li><a href="contact.html">Contacto</a></li>
+              <li><a href="services.html">Servicios</a></li>
+              <li><a href="privacy.html">Política de Privacidad</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Nuestros Servicios</h4>
+            <p>Ofrecemos una variedad de opciones deliciosas para todos los gustos.</p>
+            <ul>
+              <li><a href="#menu">Hamburguesas</a></li>
+              <li><a href="#menu">Pizza</a></li>
+              <li><a href="#menu">Pollo Frito</a></li>
+              <li><a href="#menu">Acompañamientos y Papas</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Síguenos</h4>
+            <p>Manténte conectado con nosotros en redes sociales para actualizaciones y ofertas especiales.</p>
+            <div class="socail-links mt-3">
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong>Restaurante Burger</strong>. Todos los Derechos Reservados
+      </div>
+      <div class="credits">
+        Proyecto Educativo - Sistema de Gestión de Restaurante
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="arrow"><i class="fa-solid fa-arrow-up"></i></a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+# Evitar errores de PHP en la salida
+php_flag display_errors off
+
+# Forzar codificación UTF-8
+AddDefaultCharset UTF-8
+
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !index.php
+RewriteRule ^(.*)$ index.php?url=$1

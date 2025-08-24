@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contáctanos - Restaurante Burger</title>
+  <link rel="shortcut icon" type="image" href="./images/logo.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg" id="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html" id="logo"><img src="./images/logo.png" alt="" width="30px">BUR<span>GER</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span><i class="fa-solid fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#products">Menú</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categorías
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #ffc800;">
+              <li><a class="dropdown-item" href="index.html#hamburguesas">Hamburguesas</a></li>
+              <li><a class="dropdown-item" href="index.html#pizza">Pizza</a></li>
+              <li><a class="dropdown-item" href="index.html#pollo-frito">Pollo Frito</a></li>
+              <li><a class="dropdown-item" href="index.html#acompañamientos">Acompañamientos y Papas</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">Acerca de Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="contact.html">Contáctanos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Servicios</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <div class="icons">
+            <i class="fa-regular fa-user"></i>
+            <div class="carrito">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="contar-pro">0</span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contact Hero Section -->
+  <section class="contact-hero py-5" style="background: linear-gradient(135deg, #ffc800, #ffcd32);">
+    <div class="container text-center">
+      <h1 class="display-4 mb-4 text-white">Contáctanos</h1>
+      <p class="lead text-white">Ponte en contacto con nosotros para pedidos, reservas, o cualquier pregunta</p>
+    </div>
+  </section>
+
+  <!-- Contact Content -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Contact Form -->
+        <div class="col-lg-8">
+          <div class="card shadow-sm border-0">
+            <div class="card-body p-5">
+              <h3 class="mb-4">Envíanos un Mensaje</h3>
+              <form id="contactForm">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group mb-3">
+                      <label for="name" class="form-label">Nombre Completo</label>
+                      <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group mb-3">
+                      <label for="email" class="form-label">Correo Electrónico</label>
+                      <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group mb-3">
+                      <label for="phone" class="form-label">Número de Teléfono</label>
+                      <input type="tel" class="form-control" id="phone" name="phone">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group mb-3">
+                      <label for="subject" class="form-label">Asunto</label>
+                      <select class="form-control" id="subject" name="subject" required>
+                        <option value="">Selecciona un asunto</option>
+                        <option value="general">Consulta General</option>
+                        <option value="order">Relacionado con Pedidos</option>
+                        <option value="reservation">Reservación</option>
+                        <option value="feedback">Comentarios</option>
+                        <option value="complaint">Queja</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group mb-4">
+                  <label for="message" class="form-label">Mensaje</label>
+                  <textarea class="form-control" id="message" name="message" rows="5" required placeholder="Cuéntanos cómo podemos ayudarte..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-warning btn-lg px-5">
+                  <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="col-lg-4">
+          <div class="contact-info">
+            <div class="card shadow-sm border-0 mb-4">
+              <div class="card-body p-4">
+                <h4 class="mb-3"><i class="fas fa-map-marker-alt text-warning"></i> Visítanos</h4>
+                <p class="mb-0">
+                  Calle del Restaurante 123<br>
+                  Distrito Gastronómico<br>
+                  Ciudad, Estado 12345<br>
+                  Estados Unidos
+                </p>
+              </div>
+            </div>
+
+            <div class="card shadow-sm border-0 mb-4">
+              <div class="card-body p-4">
+                <h4 class="mb-3"><i class="fas fa-phone text-warning"></i> Llámanos</h4>
+                <p class="mb-2"><strong>Principal:</strong> +1-234-567-8900</p>
+                <p class="mb-2"><strong>Pedidos:</strong> +1-234-567-8901</p>
+                <p class="mb-0"><strong>Delivery:</strong> +1-234-567-8902</p>
+              </div>
+            </div>
+
+            <div class="card shadow-sm border-0 mb-4">
+              <div class="card-body p-4">
+                <h4 class="mb-3"><i class="fas fa-envelope text-warning"></i> Escríbenos</h4>
+                <p class="mb-2"><strong>General:</strong> info@restauranteburger.com</p>
+                <p class="mb-2"><strong>Pedidos:</strong> pedidos@restauranteburger.com</p>
+                <p class="mb-0"><strong>Soporte:</strong> soporte@restauranteburger.com</p>
+              </div>
+            </div>
+
+            <div class="card shadow-sm border-0">
+              <div class="card-body p-4">
+                <h4 class="mb-3"><i class="fas fa-clock text-warning"></i> Horarios</h4>
+                <div class="row">
+                  <div class="col-6">
+                    <p><strong>Lunes - Jueves:</strong></p>
+                    <p><strong>Viernes - Sábado:</strong></p>
+                    <p><strong>Domingo:</strong></p>
+                  </div>
+                  <div class="col-6">
+                    <p>11:00 AM - 10:00 PM</p>
+                    <p>11:00 AM - 11:00 PM</p>
+                    <p>12:00 PM - 9:00 PM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer id="footer" style="margin-top: 50px;">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <a class="navbar-brand" href="index.html" id="logo2"><img src="./images/logo.png" alt="" width="30px">Burger</a>
+            <p>Tu destino favorito de hamburguesas con comida de calidad y servicio excepcional.</p><br>
+            <p>
+              Calle del Restaurante 123 <br><br>
+              Distrito Gastronómico <br><br>
+              Ciudad, Estado 12345 <br><br>
+            </p>
+            <strong><i class="fa-solid fa-phone"></i> Teléfono: <strong>+1-234-567-8900</strong></strong><br>
+            <strong><i class="fa-solid fa-envelope"></i> Email: <strong>info@restauranteburger.com</strong></strong>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Enlaces Útiles</h4>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="about.html">Acerca de</a></li>
+              <li><a href="contact.html">Contacto</a></li>
+              <li><a href="services.html">Servicios</a></li>
+              <li><a href="privacy.html">Política de Privacidad</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Nuestros Servicios</h4>
+            <p>Ofrecemos una variedad de opciones deliciosas para todos los gustos.</p>
+            <ul>
+              <li><a href="index.html#menu">Hamburguesas</a></li>
+              <li><a href="index.html#menu">Pizza</a></li>
+              <li><a href="index.html#menu">Pollo Frito</a></li>
+              <li><a href="index.html#menu">Acompañamientos y Papas</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Síguenos</h4>
+            <p>Manténte conectado con nosotros en redes sociales para actualizaciones y ofertas especiales.</p>
+            <div class="socail-links mt-3">
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong>Restaurante Burger</strong>. Todos los Derechos Reservados
+      </div>
+      <div class="credits">
+        Proyecto Educativo - Sistema de Gestión de Restaurante
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="arrow"><i class="fa-solid fa-arrow-up"></i></a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="js/cart.js"></script>
+  
+  <script>
+    // Contact Form Handler
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form data
+      const formData = new FormData(this);
+      const data = {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        phone: formData.get('phone'),
+        subject: formData.get('subject'),
+        message: formData.get('message')
+      };
+      
+      // Show success message
+      alert('¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.');
+      
+      // Reset form
+      this.reset();
+    });
+  </script>
+</body>
+</html>

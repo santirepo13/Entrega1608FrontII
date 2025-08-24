@@ -1,0 +1,314 @@
+### ==================== API INVENTARIO - DOCUMENTACIÓN ====================
+### Base URL: http://localhost/backend-apicrud/index.php
+### Autor: Prof. Jossy Tello
+### institucion: CESDE
+### Versión: 2.0
+
+### ==================== AUTENTICACIÓN ====================
+
+### Login de Usuario
+POST http://localhost/backend-apicrud/index.php?url=login
+Content-Type: application/json
+
+{
+    "usuario": "Juan",
+    "contrasena": "juan12345"
+}
+
+### ==================== CRUD PRODUCTOS ====================
+
+### Obtener todos los productos
+GET http://localhost/backend-apicrud/index.php?url=productos
+
+### Obtener producto por ID
+GET http://localhost/backend-apicrud/index.php?url=productos&id=6
+
+### Crear nuevo producto
+POST http://localhost/backend-apicrud/index.php?url=productos
+Content-Type: application/json
+
+{
+    "nombre": "Arepa con Queso",
+    "descripcion": "Arepa tradicional con queso costeño",
+    "precio": 8000,
+    "stock": 50,
+    "imagen": "https://example.com/arepa.jpg"
+}
+
+### Actualizar producto existente
+PUT http://localhost/backend-apicrud/index.php?url=productos
+Content-Type: application/json
+
+{
+    "id": 6,
+    "nombre": "Perro Caliente Especial",
+    "descripcion": "Perro con ripio, huevo y salsas especiales",
+    "precio": 25000,
+    "stock": 15,
+    "imagen": "https://th.bing.com/th/id/OIP.2QjcuwsTimAImo8WSQdTdAHaFp?rs=1&pid=ImgDetMain"
+}
+
+### Eliminar producto
+DELETE http://localhost/backend-apicrud/index.php?url=productos
+Content-Type: application/json
+
+{
+    "id": 15
+}
+
+### ==================== CRUD CLIENTES ====================
+
+### Obtener todos los clientes
+GET http://localhost/backend-apicrud/index.php?url=clientes
+
+### Obtener cliente por ID
+GET http://localhost/backend-apicrud/index.php?url=clientes&id=1
+
+### Crear nuevo cliente
+POST http://localhost/backend-apicrud/index.php?url=clientes
+Content-Type: application/json
+
+{
+    "nombre": "María",
+    "apellido": "González",
+    "email": "maria.gonzalez@gmail.com",
+    "celular": 3001234567,
+    "direccion": "Calle 123 #45-67",
+    "direccion2": "Apartamento 301",
+    "descripcion": "Cliente frecuente, prefiere entregas en la mañana"
+}
+
+### Actualizar cliente existente
+PUT http://localhost/backend-apicrud/index.php?url=clientes
+Content-Type: application/json
+
+{
+    "id": 1,
+    "nombre": "Alan",
+    "apellido": "Brito Delgado",
+    "email": "alan.brito@gmail.com",
+    "celular": 3233999999,
+    "direccion": "Calle ciega 123",
+    "direccion2": "Edificio Castilla - Apto 502",
+    "descripcion": "Dejar el pedido en la portería con el vigilante"
+}
+
+### Eliminar cliente
+DELETE http://localhost/backend-apicrud/index.php?url=clientes
+Content-Type: application/json
+
+{
+    "id": 4
+}
+
+### ==================== CRUD PEDIDOS ====================
+
+### Obtener todos los pedidos
+GET http://localhost/backend-apicrud/index.php?url=pedidos
+
+### Obtener pedido por ID (incluye detalles)
+GET http://localhost/backend-apicrud/index.php?url=pedidos&id=1
+
+### Crear nuevo pedido con productos
+POST http://localhost/backend-apicrud/index.php?url=pedidos
+Content-Type: application/json
+
+{
+    "id_cliente": 1,
+    "descuento": 5000,
+    "metodo_pago": "PSE",
+    "aumento": 0,
+    "productos": [
+        {
+            "id_producto": 12,
+            "precio": 30000,
+            "cantidad": 2
+        },
+        {
+            "id_producto": 6,
+            "precio": 22000,
+            "cantidad": 1
+        }
+    ]
+}
+
+### Actualizar pedido existente
+PUT http://localhost/backend-apicrud/index.php?url=pedidos
+Content-Type: application/json
+
+{
+    "id": 1,
+    "id_cliente": 1,
+    "descuento": 10000,
+    "metodo_pago": "Transferencia",
+    "aumento": 2000
+}
+
+### Eliminar pedido (incluye detalles)
+DELETE http://localhost/backend-apicrud/index.php?url=pedidos
+Content-Type: application/json
+
+{
+    "id": 4
+}
+
+### ==================== CRUD USUARIOS/ROLES ====================
+
+### Obtener todos los usuarios
+GET http://localhost/backend-apicrud/index.php?url=usuarios
+
+### Obtener usuario por ID
+GET http://localhost/backend-apicrud/index.php?url=usuarios&id=1
+
+### Crear nuevo usuario
+POST http://localhost/backend-apicrud/index.php?url=usuarios
+Content-Type: application/json
+
+{
+    "rol": "vendedor",
+    "usuario": "carlos_vendedor",
+    "contrasena": "carlos123456"
+}
+
+### Actualizar usuario existente (sin cambiar contraseña)
+PUT http://localhost/backend-apicrud/index.php?url=usuarios
+Content-Type: application/json
+
+{
+    "id": 2,
+    "rol": "administrador",
+    "usuario": "vendedor_admin"
+}
+
+### Actualizar usuario existente (con nueva contraseña)
+PUT http://localhost/backend-apicrud/index.php?url=usuarios
+Content-Type: application/json
+
+{
+    "id": 2,
+    "rol": "vendedor",
+    "usuario": "vendedor_actualizado",
+    "contrasena": "nueva_contrasena123"
+}
+
+### Eliminar usuario
+DELETE http://localhost/backend-apicrud/index.php?url=usuarios
+Content-Type: application/json
+
+{
+    "id": 4
+}
+
+### ==================== CRUD DETALLE PEDIDO ====================
+
+### Obtener detalles de un pedido específico
+GET http://localhost/backend-apicrud/index.php?url=detalle-pedido&id_pedido=1
+
+### Agregar producto a un pedido existente
+POST http://localhost/backend-apicrud/index.php?url=detalle-pedido
+Content-Type: application/json
+
+{
+    "id_pedido": 1,
+    "id_producto": 13,
+    "precio": 45000,
+    "cantidad": 1
+}
+
+### Actualizar detalle de pedido
+PUT http://localhost/backend-apicrud/index.php?url=detalle-pedido
+Content-Type: application/json
+
+{
+    "id": 1,
+    "precio": 32000,
+    "cantidad": 3
+}
+
+### Eliminar detalle de pedido
+DELETE http://localhost/backend-apicrud/index.php?url=detalle-pedido
+Content-Type: application/json
+
+{
+    "id": 4
+}
+
+### ==================== EJEMPLOS DE RESPUESTAS ====================
+
+### Respuesta exitosa - Login
+# {
+#     "id": "1",
+#     "rol": "administrador",
+#     "usuario": "admin"
+# }
+
+### Respuesta exitosa - Lista de productos
+# [
+#     {
+#         "id": "6",
+#         "nombre": "Perro",
+#         "descripcion": "sin ripio y sin huevo",
+#         "precio": "22000.00",
+#         "stock": "20",
+#         "imagen": "https://th.bing.com/th/id/OIP.2QjcuwsTimAImo8WSQdTdAHaFp?rs=1&pid=ImgDetMain",
+#         "created_at": "2024-05-03 20:55:08",
+#         "updated_at": "2024-05-06 00:14:09"
+#     }
+# ]
+
+### Respuesta exitosa - Pedido con detalles
+# {
+#     "id": "1",
+#     "id_cliente": "1",
+#     "descuento": "5000",
+#     "metodo_pago": "PSE",
+#     "aumento": "0",
+#     "fecha": "2024-09-01 20:05:08",
+#     "nombre": "Alan",
+#     "apellido": "Brito",
+#     "email": "alambre@gmail.com",
+#     "detalles": [
+#         {
+#             "id": "1",
+#             "id_pedido": "1",
+#             "id_producto": "12",
+#             "precio": "30000",
+#             "cantidad": "2",
+#             "producto_nombre": "Hamburguesa"
+#         }
+#     ]
+# }
+
+### Respuesta de error - 404
+# {
+#     "message": "Producto no encontrado"
+# }
+
+### Respuesta de error - 401
+# {
+#     "message": "Credenciales incorrectas"
+# }
+
+### Respuesta de error - 409
+# {
+#     "message": "El usuario ya existe"
+# }
+
+### ==================== CÓDIGOS DE ESTADO HTTP ====================
+# 200 - OK: Operación exitosa
+# 201 - Created: Recurso creado exitosamente
+# 400 - Bad Request: Datos inválidos o faltantes
+# 401 - Unauthorized: Credenciales incorrectas
+# 404 - Not Found: Recurso no encontrado
+# 405 - Method Not Allowed: Método HTTP no permitido
+# 409 - Conflict: Conflicto (ej: usuario ya existe)
+# 500 - Internal Server Error: Error del servidor
+
+### ==================== NOTAS IMPORTANTES ====================
+# 1. Todos los endpoints requieren Content-Type: application/json para POST/PUT
+# 2. Los IDs son autoincrementales en la base de datos
+# 3. Al crear un pedido, se actualiza automáticamente el stock de productos
+# 4. Al eliminar un pedido, se eliminan también sus detalles
+# 5. Las contraseñas se almacenan en texto plano (para una sencilla manipulacion, por ser proyecto educativo)
+# 6. Los métodos de pago válidos son: 'PSE', 'Contraentrega', 'Transferencia'
+# 7. Los roles válidos son: 'administrador', 'vendedor', 'cajero'

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Admin - Inventario</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Inventario</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Modulos
+            </div>
+
+            <!-- Nav Item - Productos -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProductos"
+                    aria-expanded="true" aria-controls="collapseProductos">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Productos</span>
+                </a>
+                <div id="collapseProductos" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Acciones:</h6>
+                        <a class="collapse-item" href="listado-pro.html">Ver Productos</a>
+                        <a class="collapse-item" href="crear-pro.html">Crear Productos</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Clientes -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseClientes"
+                    aria-expanded="true" aria-controls="collapseClientes">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Clientes</span>
+                </a>
+                <div id="collapseClientes" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Acciones:</h6>
+                        <a class="collapse-item" href="listado-clientes.html">Ver Clientes</a>
+                        <a class="collapse-item" href="crear-cliente.html">Crear Cliente</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Pedidos -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePedidos"
+                    aria-expanded="true" aria-controls="collapsePedidos">
+                    <i class="fas fa-fw fa-shopping-cart"></i>
+                    <span>Pedidos</span>
+                </a>
+                <div id="collapsePedidos" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Acciones:</h6>
+                        <a class="collapse-item" href="listado-pedidos.html">Ver Pedidos</a>
+                        <a class="collapse-item" href="crear-pedido.html">Crear Pedido</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Usuarios -->
+            <li class="nav-item active">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUsuarios"
+                    aria-expanded="true" aria-controls="collapseUsuarios">
+                    <i class="fas fa-fw fa-user-cog"></i>
+                    <span>Usuarios</span>
+                </a>
+                <div id="collapseUsuarios" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Acciones:</h6>
+                        <a class="collapse-item" href="listado-usuarios.html">Ver Usuarios</a>
+                        <a class="collapse-item active" href="crear-usuario.html">Crear Usuario</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <!-- Main Content -->
+            <div id="content">
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Search -->
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span id="nombre-usuario" class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <button id="btnLogout" class="dropdown-item" type="button" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Crear Usuario</h1>
+                        <a href="listado-usuarios.html" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                            <i class="fas fa-list fa-sm text-white-50"></i> Listado </a>
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row">
+                        <div class="col-6">
+                            <form id="form-usuario">
+                                <!-- Rol -->
+                                <div class="form-group">
+                                    <label class="form-label" for="rol-usuario">Rol</label>
+                                    <select id="rol-usuario" class="form-control" required>
+                                        <option value="">Seleccionar Rol</option>
+                                        <option value="administrador">Administrador</option>
+                                        <option value="vendedor">Vendedor</option>
+                                        <option value="cajero">Cajero</option>
+                                    </select>
+                                </div>
+
+                                <!-- Usuario -->
+                                <div class="form-group">
+                                    <label class="form-label" for="nombre-usuario-input">Usuario</label>
+                                    <input type="text" id="nombre-usuario-input" class="form-control" required />
+                                </div>
+
+                                <!-- Contraseña -->
+                                <div class="form-group">
+                                    <label class="form-label" for="contrasena-usuario">Contraseña</label>
+                                    <input type="password" id="contrasena-usuario" class="form-control" required />
+                                </div>
+
+                                <!-- Confirmar Contraseña -->
+                                <div class="form-group">
+                                    <label class="form-label" for="confirmar-contrasena">Confirmar Contraseña</label>
+                                    <input type="password" id="confirmar-contrasena" class="form-control" required />
+                                </div>
+
+                                <!-- Botones -->
+                                <button type="button" class="btn-create btn btn-primary btn-block mb-4">Crear Usuario</button>
+                                <button type="button" class="d-none btn-update btn btn-success btn-block mb-4">Actualizar Usuario</button>
+                            </form>
+                        </div>
+                        <div class="col-6">
+                            <div class="card shadow">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Información del Rol</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div id="rol-info">
+                                        <p class="text-muted">Selecciona un rol para ver sus permisos</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2021</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+        </div>
+        <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/sb-admin-2.min.js"></script>
+    
+    <script>
+        // Información de roles
+        const rolesInfo = {
+            'administrador': {
+                title: 'Administrador',
+                permissions: [
+                    'Acceso completo al sistema',
+                    'Gestión de usuarios',
+                    'Gestión de productos',
+                    'Gestión de clientes',
+                    'Gestión de pedidos',
+                    'Reportes y estadísticas'
+                ],
+                color: 'danger'
+            },
+            'vendedor': {
+                title: 'Vendedor',
+                permissions: [
+                    'Gestión de productos',
+                    'Gestión de clientes',
+                    'Crear y editar pedidos',
+                    'Ver reportes básicos'
+                ],
+                color: 'primary'
+            },
+            'cajero': {
+                title: 'Cajero',
+                permissions: [
+                    'Procesar pedidos',
+                    'Ver productos',
+                    'Ver clientes',
+                    'Generar facturas'
+                ],
+                color: 'success'
+            }
+        };
+
+        // Mostrar información del rol seleccionado
+        document.getElementById('rol-usuario').addEventListener('change', function() {
+            const selectedRole = this.value;
+            const infoDiv = document.getElementById('rol-info');
+            
+            if (selectedRole && rolesInfo[selectedRole]) {
+                const roleData = rolesInfo[selectedRole];
+                let permissionsHtml = roleData.permissions.map(permission => 
+                    `<li class="text-sm">${permission}</li>`
+                ).join('');
+                
+                infoDiv.innerHTML = `
+                    <h5 class="text-${roleData.color}">${roleData.title}</h5>
+                    <p><strong>Permisos:</strong></p>
+                    <ul class="mb-0">
+                        ${permissionsHtml}
+                    </ul>
+                `;
+            } else {
+                infoDiv.innerHTML = '<p class="text-muted">Selecciona un rol para ver sus permisos</p>';
+            }
+        });
+    </script>
+    <script type="module" src="js/local.js"></script>
+    <script src="js/crear-usuario.js"></script>
+</body>
+
+</html>

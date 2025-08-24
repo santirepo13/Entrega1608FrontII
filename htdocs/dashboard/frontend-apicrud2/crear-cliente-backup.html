@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Admin - Crear/Editar Cliente</title>
+
+  <!-- Fonts & Icons -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
+
+  <!-- SB Admin 2 (incluye Bootstrap CSS dentro) -->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+      <!-- Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-laugh-wink"></i></div>
+        <div class="sidebar-brand-text mx-3">Inventario</div>
+      </a>
+
+      <hr class="sidebar-divider my-0">
+
+      <!-- Dashboard -->
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-fw fa-tachometer-alt"></i><span>Dashboard</span>
+        </a>
+      </li>
+
+      <hr class="sidebar-divider">
+
+      <div class="sidebar-heading">Modulos</div>
+
+      <!-- Productos -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProductos" aria-expanded="true">
+          <i class="fas fa-fw fa-cog"></i><span>Productos</span>
+        </a>
+        <div id="collapseProductos" class="collapse" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Acciones:</h6>
+            <a class="collapse-item" href="listado-pro.html">Ver Productos</a>
+            <a class="collapse-item" href="crear-pro.html">Crear Productos</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Clientes -->
+      <li class="nav-item active">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseClientes" aria-expanded="true">
+          <i class="fas fa-fw fa-users"></i><span>Clientes</span>
+        </a>
+        <div id="collapseClientes" class="collapse show" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Acciones:</h6>
+            <a class="collapse-item" href="listado-clientes.html">Ver Clientes</a>
+            <a class="collapse-item active" href="crear-cliente.html">Crear Cliente</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Pedidos -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePedidos" aria-expanded="true">
+          <i class="fas fa-fw fa-shopping-cart"></i><span>Pedidos</span>
+        </a>
+        <div id="collapsePedidos" class="collapse" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Acciones:</h6>
+            <a class="collapse-item" href="listado-pedidos.html">Ver Pedidos</a>
+            <a class="collapse-item" href="crear-pedido.html">Crear Pedido</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Usuarios -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUsuarios" aria-expanded="true">
+          <i class="fas fa-fw fa-user-cog"></i><span>Usuarios</span>
+        </a>
+        <div id="collapseUsuarios" class="collapse" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Acciones:</h6>
+            <a class="collapse-item" href="listado-usuarios.html">Ver Usuarios</a>
+            <a class="collapse-item" href="crear-usuario.html">Crear Usuario</a>
+          </div>
+        </div>
+      </li>
+
+      <hr class="sidebar-divider">
+
+      <!-- Toggler -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+    </ul>
+    <!-- End Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+      <div id="content">
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <!-- Search (decorativo) -->
+          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+            <div class="input-group">
+              <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button"><i class="fas fa-search fa-sm"></i></button>
+              </div>
+            </div>
+          </form>
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown">
+                <span id="nombre-usuario" class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
+                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+              </a>
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="#"><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>Profile</a>
+                <div class="dropdown-divider"></div>
+                <button type="button" id="btnLogout" class="dropdown-item" data-toggle="modal" data-target="#logoutModal">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>Logout
+                </button>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <!-- End Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Crear Cliente</h1>
+            <a href="listado-clientes.html" class="d-none d-sm-inline-block btn btn-sm btn-secondary shadow-sm">
+              <i class="fas fa-list fa-sm text-white-50"></i> Ver Clientes
+            </a>
+          </div>
+
+          <!-- Card con el formulario -->
+          <div class="row">
+            <div class="col-12">
+              <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Datos del Cliente</h6>
+                </div>
+                <div class="card-body">
+                  <form id="form-cliente">
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="nombre">Nombre</label>
+                        <input id="nombre" name="nombre" type="text" class="form-control" placeholder="Nombre">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="apellido">Apellido</label>
+                        <input id="apellido" name="apellido" type="text" class="form-control" placeholder="Apellido">
+                      </div>
+                    </div>
+
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" class="form-control" placeholder="correo@ejemplo.com">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="celular">Celular</label>
+                        <input id="celular" name="celular" type="text" class="form-control" placeholder="Celular">
+                      </div>
+                    </div>
+
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="direccion">Dirección Principal</label>
+                        <input id="direccion" name="direccion" type="text" class="form-control" placeholder="Dirección principal">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="direccion2">Dirección Secundaria</label>
+                        <input id="direccion2" name="direccion2" type="text" class="form-control" placeholder="Dirección secundaria">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="descripcion">Descripción</label>
+                      <textarea id="descripcion" name="descripcion" rows="4" class="form-control" placeholder="Notas"></textarea>
+                    </div>
+
+                    <button id="btnSubmit" type="submit" class="btn btn-primary">Crear Cliente</button>
+                  </form>
+                </div> <!-- /.card-body -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.container-fluid -->
+      </div>
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Your Website 2021</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- End Content Wrapper -->
+  </div>
+  <!-- End Page Wrapper -->
+
+  <!-- Scroll to Top -->
+  <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
+
+  <!-- Logout Modal -->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document"><div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+      <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+        <a class="btn btn-primary" href="login.html">Logout</a>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- JS core -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Tu lógica de crear/editar -->
+  <script src="js/local.js"></script>
+<script src="js/crear-clientes.js"></script>
+  
+</body>
+</html>

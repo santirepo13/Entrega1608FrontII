@@ -1,0 +1,11 @@
+RewriteEngine on
+# Exclude specific directories and files from rewriting
+RewriteCond %{REQUEST_URI} !\.(html|css|js|png|jpg|jpeg|gif|ico)$
+RewriteCond %{REQUEST_URI} !index.php
+RewriteCond %{REQUEST_URI} !frontend-apicrud2
+RewriteCond %{REQUEST_URI} !backend-apiCrud
+RewriteCond %{REQUEST_URI} !Restaurante
+RewriteCond %{REQUEST_URI} !integration_test.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?url=$1

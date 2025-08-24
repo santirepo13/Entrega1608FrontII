@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Burger</title>
+  <link rel="shortcut icon" type="image" href="./images/logo.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <!-- bootstrap links -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- bootstrap links -->
+  <!-- fonts links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+  <!-- fonts links -->
+</head>
+<body>
+  <!-- nav section -->
+    <nav class="navbar navbar-expand-lg" id="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html" id="logo"><img src="./images/logo.png" alt="" width="30px">BUR<span>GER</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span><i class="fa-solid fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#menu">Menú</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Categorías
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #ffc800;">
+                <li><a class="dropdown-item" href="index.html#menu">Hamburguesas</a></li>
+                <li><a class="dropdown-item" href="index.html#menu">Pizza</a></li>
+                <li><a class="dropdown-item" href="index.html#menu">Pollo Frito</a></li>
+                <li><a class="dropdown-item" href="index.html#menu">Acompañamientos y Papas</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Acerca de Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contáctanos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Servicios</a>
+            </li>
+          </ul>
+          
+          <form class="d-flex">
+            <div class="icons">
+              <i class="fa-regular fa-user"></i>
+              <div class="carrito">
+                <a href="cart.html" style="color: inherit; text-decoration: none;">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <span class="contar-pro">0</span>
+                </a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- nav section -->
+     <!-- cart section -->
+     <h2 class="page-title text-center my-5 py-3" style="background-color: #ffc800;">PEDIDO EN PROCESO</h2>
+     <div class="page-content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <!-- Success Message -->
+                    <div class="text-center mb-5">
+                        <div class="success-icon mb-4">
+                            <i class="fa-solid fa-check-circle" style="font-size: 72px; color: #ffc800;"></i>
+                        </div>
+                        <h2 class="mb-3" style="color: #ffc800;">¡Pedido Realizado con Éxito!</h2>
+                        <p class="lead mb-4">Gracias por tu compra. Estamos preparando tu pedido y pronto nos comunicaremos contigo.</p>
+                    </div>
+                    
+                    <!-- Order Details -->
+                    <div class="card shadow-sm mb-4" id="order-details">
+                        <div class="card-header" style="background-color: #ffc800;">
+                            <h5 class="mb-0"><i class="fa-solid fa-receipt me-2"></i>Detalles del Pedido</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p><strong>Número de Pedido:</strong> <span id="order-id">Cargando...</span></p>
+                                    <p><strong>Cliente:</strong> <span id="customer-name">Cargando...</span></p>
+                                    <p><strong>Email:</strong> <span id="customer-email">Cargando...</span></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><strong>Teléfono:</strong> <span id="customer-phone">Cargando...</span></p>
+                                    <p><strong>Dirección:</strong> <span id="customer-address">Cargando...</span></p>
+                                    <p><strong>Método de Pago:</strong> <span id="payment-method">Cargando...</span></p>
+                                </div>
+                            </div>
+                            
+                            <!-- Tracking Information -->
+                            <div class="alert alert-info mt-3" id="tracking-info" style="display: none;">
+                                <div class="row align-items-center">
+                                    <div class="col-md-8">
+                                        <h6 class="mb-1"><i class="fa-solid fa-route me-2"></i>Seguimiento de Pedido</h6>
+                                        <p class="mb-0">Puedes hacer seguimiento de tu pedido en tiempo real usando el siguiente enlace:</p>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <a id="tracking-link" href="#" target="_blank" class="btn btn-outline-primary btn-sm">
+                                            <i class="fa-solid fa-external-link-alt me-1"></i>Ver Seguimiento
+                                        </a>
+                                    </div>
+                                </div>
+                                <hr class="my-2">
+                                <small class="text-muted">
+                                    <i class="fa-solid fa-info-circle me-1"></i>
+                                    Guarda este enlace para consultar el estado de tu pedido en cualquier momento.
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Products Ordered -->
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-header" style="background-color: #ffc800;">
+                            <h5 class="mb-0"><i class="fa-solid fa-shopping-bag me-2"></i>Productos Ordenados</h5>
+                        </div>
+                        <div class="card-body">
+                            <div id="ordered-products">
+                                <p class="text-center">Cargando productos...</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Order Total -->
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-header" style="background-color: #ffc800;">
+                            <h5 class="mb-0"><i class="fa-solid fa-calculator me-2"></i>Resumen de Pago</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-6"><strong>Subtotal:</strong></div>
+                                <div class="col-6 text-end"><span id="order-subtotal">$0.00</span></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">Valor Domicilio:</div>
+                                <div class="col-6 text-end"><span id="order-delivery">$0.00</span></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">Descuento:</div>
+                                <div class="col-6 text-end text-success"><span id="order-discount">-$0.00</span></div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-6"><h5>Total:</h5></div>
+                                <div class="col-6 text-end"><h5 style="color: #ffc800;" id="order-total">$0.00</h5></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Actions -->
+                    <div class="text-center">
+                        <a href="index.html" class="cus-btn dark me-3">
+                            <span class="icon-wrapper">
+                                <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M16.2522 11.9789C14.4658 10.1925 13.7513 6.14339 15.6567 4.23792M15.6567 4.23792C14.565 5.3296 11.4885 7.21521 7.91576 3.64246M15.6567 4.23792L4.34301 15.5516" stroke="#FCFDFD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                            Realizar Otra Compra
+                        </a>
+                        <button onclick="window.print()" class="cus-btn primary">
+                            <span class="icon-wrapper">
+                                <i class="fa-solid fa-print"></i>
+                            </span>
+                            Imprimir Recibo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+     <!-- cart section -->
+   <!-- footer -->
+    <footer id="footer" style="margin-top: 50px;">
+     <div class="footer-top">
+       <div class="container">
+         <div class="row">
+           <div class="col-lg-3 col-md-6 footer-contact">
+             <a class="navbar-brand" href="index.html" id="logo2"><img src="./images/logo.png" alt="" width="30px">Burger</a>
+             <p>Tu destino favorito de hamburguesas con comida de calidad y servicio excepcional.</p><br>
+             <p>
+               Calle del Restaurante 123 <br><br>
+               Distrito Gastronómico <br><br>
+               Ciudad, Estado 12345 <br><br>
+             </p>
+             <strong><i class="fa-solid fa-phone"></i> Teléfono: <strong>+1-234-567-8900</strong></strong><br>
+             <strong><i class="fa-solid fa-envelope"></i> Email: <strong>info@restauranteburger.com</strong></strong>
+           </div>
+           <div class="col-lg-3 col-md-6 footer-links">
+             <h4>Enlaces Útiles</h4>
+             <ul>
+               <li><a href="index.html">Inicio</a></li>
+               <li><a href="about.html">Acerca de</a></li>
+               <li><a href="contact.html">Contacto</a></li>
+               <li><a href="services.html">Servicios</a></li>
+               <li><a href="privacy.html">Política de Privacidad</a></li>
+             </ul>
+           </div>
+           
+           <div class="col-lg-3 col-md-6 footer-links">
+             <h4>Nuestros Servicios</h4>
+             <p>Ofrecemos una variedad de opciones deliciosas para todos los gustos.</p>
+             <ul>
+               <li><a href="index.html#menu">Hamburguesas</a></li>
+               <li><a href="index.html#menu">Pizza</a></li>
+               <li><a href="index.html#menu">Pollo Frito</a></li>
+               <li><a href="index.html#menu">Acompañamientos y Papas</a></li>
+             </ul>
+           </div>
+           
+           <div class="col-lg-3 col-md-6 footer-links">
+             <h4>Síguenos</h4>
+             <p>Manténte conectado con nosotros en redes sociales para actualizaciones y ofertas especiales.</p>
+             <div class="socail-links mt-3">
+               <a href="#"><i class="fa-brands fa-twitter"></i></a>
+               <a href="#"><i class="fa-brands fa-facebook"></i></a>
+               <a href="#"><i class="fa-brands fa-google-plus"></i></a>
+               <a href="#"><i class="fa-brands fa-instagram"></i></a>
+               <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+             </div>
+           </div>
+ 
+         </div>
+       </div>
+     </div>
+   
+   <hr>
+   <div class="container py-4">
+     <div class="copyright">
+       &copy; Copyright <strong>Burger</strong>. Todos los derechos reservados
+     </div>
+     <div class="credits">
+       Diseñado por <a href="#">SA coding</a>
+     </div>
+   </div>
+    </footer>
+ 
+   <!-- footer -->
+   <a href="#" class="arrow"><i class="fa-solid fa-arrow-up"></i></a>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   
+   <script>
+   // Load and display order information
+   document.addEventListener('DOMContentLoaded', function() {
+       console.log('🚀 Thank you page loaded');
+       loadOrderInfo();
+   });
+   
+   function loadOrderInfo() {
+       try {
+           // Get order information from localStorage
+           const orderInfo = JSON.parse(localStorage.getItem('lastOrder'));
+           console.log('Order info:', orderInfo);
+           
+           if (!orderInfo) {
+               console.warn('No order information found');
+               showNoOrderMessage();
+               return;
+           }
+           
+           // Display order details
+           document.getElementById('order-id').textContent = orderInfo.orderId;
+           document.getElementById('customer-name').textContent = orderInfo.customerName;
+           document.getElementById('customer-email').textContent = orderInfo.email;
+           document.getElementById('customer-phone').textContent = orderInfo.phone;
+           document.getElementById('customer-address').textContent = orderInfo.address;
+           document.getElementById('payment-method').textContent = orderInfo.paymentMethod;
+           
+           // Display tracking information if available
+           if (orderInfo.trackingToken) {
+               const trackingInfo = document.getElementById('tracking-info');
+               const trackingLink = document.getElementById('tracking-link');
+               
+               if (trackingInfo && trackingLink) {
+               const trackingUrl = `/dashboard/tracking.php?token=${orderInfo.trackingToken}`;
+               trackingLink.href = trackingUrl;
+                   trackingInfo.style.display = 'block';
+                   
+                   console.log('🔗 Tracking link available:', trackingUrl);
+               }
+           }
+           
+           // Display products
+           displayOrderedProducts(orderInfo.products);
+           
+           // Display totals with correct logic
+           if (orderInfo.totals) {
+               document.getElementById('order-subtotal').textContent = '$' + orderInfo.totals.subtotal.toFixed(2);
+               document.getElementById('order-delivery').textContent = '$' + (orderInfo.totals.domicilio || 0).toFixed(2);
+               document.getElementById('order-discount').textContent = '-$' + (orderInfo.totals.descuento || 0).toFixed(2);
+               document.getElementById('order-total').textContent = '$' + orderInfo.totals.total.toFixed(2);
+           } else {
+               // Fallback: calculate totals from cart with correct logic
+               const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+               const subtotal = carrito.reduce((sum, item) => sum + (parseFloat(item.precio) * (item.cantidad || 1)), 0);
+               
+               // Only apply delivery if explicitly requested
+               const valorDomicilio = localStorage.getItem('deliverySelected') === 'true' ? 5.00 : 0.00;
+               
+               // Only apply discount if valid code exists
+               const discountCode = localStorage.getItem('discountCode');
+               const descuentoPromo = (discountCode && discountCode === 'PROMO5') ? 5.00 : 0.00;
+               
+               const total = subtotal + valorDomicilio - descuentoPromo;
+               
+               document.getElementById('order-subtotal').textContent = '$' + subtotal.toFixed(2);
+               document.getElementById('order-delivery').textContent = '$' + valorDomicilio.toFixed(2);
+               document.getElementById('order-discount').textContent = '-$' + descuentoPromo.toFixed(2);
+               document.getElementById('order-total').textContent = '$' + total.toFixed(2);
+           }
+           
+           // Clean up - remove order info after displaying (optional)
+           setTimeout(() => {
+               localStorage.removeItem('lastOrder');
+               console.log('Order info cleared from localStorage');
+           }, 5000); // Keep for 5 seconds in case user refreshes
+           
+       } catch (error) {
+           console.error('Error loading order info:', error);
+           showNoOrderMessage();
+       }
+   }
+   
+   function displayOrderedProducts(products) {
+       const container = document.getElementById('ordered-products');
+       
+       if (!products || products.length === 0) {
+           container.innerHTML = '<p class="text-center text-muted">No se encontraron productos.</p>';
+           return;
+       }
+       
+       let html = '<div class="table-responsive">';
+       html += '<table class="table table-sm">';
+       html += '<thead><tr><th>Producto</th><th>Cantidad</th><th>Precio Unit.</th><th>Total</th></tr></thead>';
+       html += '<tbody>';
+       
+       products.forEach(product => {
+           const cantidad = product.cantidad || 1;
+           const precio = parseFloat(product.precio) || 0;
+           const total = precio * cantidad;
+           
+           html += `
+               <tr>
+                   <td>
+                       <div class="d-flex align-items-center">
+                           <img src="${product.imagen}" alt="${product.nombre}" style="width: 40px; height: 40px; object-fit: cover; margin-right: 10px; border-radius: 4px;">
+                           <div>
+                               <strong>${product.nombre}</strong>
+                               ${product.descripcion ? '<br><small class="text-muted">' + product.descripcion + '</small>' : ''}
+                           </div>
+                       </div>
+                   </td>
+                   <td class="text-center">${cantidad}</td>
+                   <td class="text-end">$${precio.toFixed(2)}</td>
+                   <td class="text-end"><strong>$${total.toFixed(2)}</strong></td>
+               </tr>
+           `;
+       });
+       
+       html += '</tbody></table></div>';
+       container.innerHTML = html;
+   }
+   
+   function showNoOrderMessage() {
+       document.getElementById('order-details').innerHTML = `
+           <div class="alert alert-warning text-center" role="alert">
+               <i class="fa-solid fa-exclamation-triangle me-2"></i>
+               No se encontró información del pedido. 
+               <a href="index.html" class="alert-link">Volver al inicio</a>
+           </div>
+       `;
+       
+       // Hide other sections
+       document.querySelector('#ordered-products').closest('.card').style.display = 'none';
+       document.querySelector('#order-total').closest('.card').style.display = 'none';
+   }
+   </script>
+</body>
+</html>

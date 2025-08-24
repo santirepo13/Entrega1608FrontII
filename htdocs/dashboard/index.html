@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Restaurante - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .dashboard-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        .dashboard-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
+        }
+        .card-header {
+            background: linear-gradient(45deg, #ffc800, #ffcd32);
+            color: #333;
+            font-weight: bold;
+            border: none;
+            padding: 20px;
+        }
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+        .btn-module {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border: none;
+            border-radius: 25px;
+            padding: 12px 30px;
+            color: white;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .btn-module:hover {
+            background: linear-gradient(45deg, #764ba2, #667eea);
+            color: white;
+            transform: scale(1.05);
+        }
+        .status-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #28a745;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+        .hero-section {
+            text-align: center;
+            padding: 50px 0;
+            color: white;
+        }
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .hero-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+        .integration-status {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="container">
+                <h1 class="hero-title">
+                    <i class="fas fa-utensils"></i>
+                    Sistema de Restaurante
+                </h1>
+                <p class="hero-subtitle">
+                    Sistema completo de gestión con Backend API, Administración y Plataforma de Pedidos
+                </p>
+                
+                <div class="integration-status">
+                    <h5><i class="fas fa-check-circle text-success"></i> Sistema Totalmente Integrado</h5>
+                    <p class="mb-0">Backend API + Frontend Admin + Módulo Restaurante + Base de Datos</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modules Grid -->
+        <div class="container">
+            <div class="row justify-content-center">
+                
+                <!-- Backend API Module -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="dashboard-card position-relative">
+                        <span class="status-badge">✓ Operativo</span>
+                        <div class="card-header text-center">
+                            <div class="card-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h4>Backend API</h4>
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="card-text">
+                                API REST completa para gestión de productos, clientes, usuarios y pedidos.
+                                Incluye autenticación y validaciones.
+                            </p>
+                            <ul class="list-unstyled mb-4">
+                                <li><i class="fas fa-check text-success"></i> CRUD Productos</li>
+                                <li><i class="fas fa-check text-success"></i> CRUD Clientes</li>
+                                <li><i class="fas fa-check text-success"></i> CRUD Usuarios</li>
+                                <li><i class="fas fa-check text-success"></i> Sistema de Pedidos</li>
+                                <li><i class="fas fa-check text-success"></i> Autenticación</li>
+                            </ul>
+                            <a href="backend-apiCrud/" class="btn btn-module">
+                                <i class="fas fa-code"></i> Acceder API
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frontend Admin Module -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="dashboard-card position-relative">
+                        <span class="status-badge">✓ Operativo</span>
+                        <div class="card-header text-center">
+                            <div class="card-icon">
+                                <i class="fas fa-tachometer-alt"></i>
+                            </div>
+                            <h4>Panel de Administración</h4>
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="card-text">
+                                Interfaz web completa para administrar productos, clientes, usuarios y pedidos.
+                                Con autenticación y roles.
+                            </p>
+                            <ul class="list-unstyled mb-4">
+                                <li><i class="fas fa-check text-success"></i> Gestión de Productos</li>
+                                <li><i class="fas fa-check text-success"></i> Gestión de Clientes</li>
+                                <li><i class="fas fa-check text-success"></i> Gestión de Usuarios</li>
+                                <li><i class="fas fa-check text-success"></i> Gestión de Pedidos</li>
+                                <li><i class="fas fa-check text-success"></i> Login Seguro</li>
+                            </ul>
+                            <a href="frontend-apicrud2/login.html" class="btn btn-module">
+                                <i class="fas fa-sign-in-alt"></i> Admin Login
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurant Module -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="dashboard-card position-relative">
+                        <span class="status-badge">✓ Operativo</span>
+                        <div class="card-header text-center">
+                            <div class="card-icon">
+                                <i class="fas fa-hamburger"></i>
+                            </div>
+                            <h4>Plataforma de Pedidos</h4>
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="card-text">
+                                Plataforma completa para clientes con catálogo de productos, 
+                                carrito de compras y checkout integrado.
+                            </p>
+                            <ul class="list-unstyled mb-4">
+                                <li><i class="fas fa-check text-success"></i> Catálogo de Productos</li>
+                                <li><i class="fas fa-check text-success"></i> Carrito de Compras</li>
+                                <li><i class="fas fa-check text-success"></i> Proceso de Checkout</li>
+                                <li><i class="fas fa-check text-success"></i> Formulario de Pedidos</li>
+                                <li><i class="fas fa-check text-success"></i> Integración con API</li>
+                            </ul>
+                            <a href="Restaurante/platilla-carrito/index.html" class="btn btn-module">
+                                <i class="fas fa-shopping-cart"></i> Ir a Restaurante
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Integration Testing -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="dashboard-card">
+                        <div class="card-header text-center">
+                            <div class="card-icon">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <h4>Herramientas de Desarrollo</h4>
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="mb-4">Herramientas para probar y verificar la integración entre módulos</p>
+                            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                                <a href="integration_test.html" class="btn btn-module">
+                                    <i class="fas fa-vial"></i> Test de Integración
+                                </a>
+                                <a href="backend-apiCrud/index.php?url=productos" class="btn btn-module">
+                                    <i class="fas fa-database"></i> Ver API Productos
+                                </a>
+                                <a href="frontend-apicrud2/index.html" class="btn btn-module">
+                                    <i class="fas fa-home"></i> Dashboard Admin
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- System Status -->
+            <div class="row mt-4 mb-5">
+                <div class="col-12">
+                    <div class="dashboard-card">
+                        <div class="card-body">
+                            <h5 class="text-center mb-4">
+                                <i class="fas fa-heartbeat text-success"></i> 
+                                Estado del Sistema
+                            </h5>
+                            <div class="row text-center">
+                                <div class="col-md-3">
+                                    <div class="p-3">
+                                        <i class="fas fa-database text-success fa-2x"></i>
+                                        <h6 class="mt-2">Base de Datos</h6>
+                                        <span class="badge bg-success">Conectada</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="p-3">
+                                        <i class="fas fa-server text-success fa-2x"></i>
+                                        <h6 class="mt-2">Backend API</h6>
+                                        <span class="badge bg-success">Activa</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="p-3">
+                                        <i class="fas fa-desktop text-success fa-2x"></i>
+                                        <h6 class="mt-2">Panel Admin</h6>
+                                        <span class="badge bg-success">Operativo</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="p-3">
+                                        <i class="fas fa-store text-success fa-2x"></i>
+                                        <h6 class="mt-2">Restaurante</h6>
+                                        <span class="badge bg-success">Funcional</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="text-center">
+                                <p class="mb-0">
+                                    <i class="fas fa-graduation-cap text-primary"></i>
+                                    <strong>Sistema Educativo Completo:</strong> 
+                                    Backend PHP + Frontend JS + Base de Datos MySQL + Integración Total
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
